@@ -634,7 +634,7 @@ sunshine -  булева переменная, показывает время �
 if Event.Time.hour == 15 then
   if Event.Time.min == 0 then
     -- включаем
-  elseif Event.Time.min == 1 then
+  else Event.Time.min == 1 then
     -- выключаем
   end
 end
@@ -678,7 +678,8 @@ telegram.send("SLS загружен!!!")
 
 local sunset_hour, sunset_min = os.sunset()
 local sunrise_hour, sunrise_min = os.sunrise()
-telegram.send("sunrise " ..sunset_hour  ..":".. sunset_min )
+telegram.send("Восход " ..sunrise_hour  ..":".. sunrise_min)
+telegram.send("Закат " ..sunset_hour  ..":".. sunset_min) 
 ```
 
 
